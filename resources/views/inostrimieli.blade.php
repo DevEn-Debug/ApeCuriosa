@@ -60,27 +60,38 @@
 
 
 
+      <div style="background-color: #e47a2e;color:#121212;padding:40px 0;position:relative;" class="content">
+        <div class="row justify-content-center">
+          <div class="col-xs-12 col-md-6 col-lg-4  flex-centre ">
+            <h2 style="font-size: 2rem;font-weight: bold;">I NOSTRI MIELI</h2>
+          </div>
+        </div>
+      </div>
 
 
       <div class="contenuto">
-        <div class="container content">
-          <div class="row">
-            <div class="col-xs-12 col-md-6 col-lg-6 blocco-flat flex-centre">
-              <img class="imgesplicativa"src="img/IMG_20170703_182506.jpg" alt="">
-            </div>
+        <div class="container-fluid content">
+          <div class="row ">
+              @foreach ($honeys as $honey)
+              @if ($honey-> available)
+                  <div class="col-xs-12 col-md-6 col-lg-3 blocco-flat flex-center product">
+                    <div class="prodotto">
+                      <a href="#">
+                          <div class="img-prodotto">
+                            <img src="{{$honey-> image}}" alt="">
+                          </div>
+                          <div class="dettagli">
+                            <h3>{{$honey-> title}} {{$honey-> weight}}</h3>
+                          </div>
+                      </a>
 
-            <div class="col-xs-12 col-md-6 col-lg-6 blocco-flat flex-centre">
-              <h2>Chi siamo</h2>
-              <div class="intermezzo">
-                <hr>
-                <img class="imgintemezzo "src="img/apeintermezzo.png" alt="404">
-                <hr>
-              </div>
-              <p>Siamo una piccola azienda di produzione familiare che punta sulla qualità più che sulla quantità dei prodotti. Le nostre api vengono "accudite" solo con trattamenti naturali e anche l'estrazione del miele viene fatta in modo da rispettare il naturale decorso della vita di questi piccoli insetti.Le postazioni dei nostri alveari ci permettono di produrre diversi tipi di miele (Acacia, Castagno, Millefiori ecc..) e grazie al nomadismo anche alcuni pregiati mieli di montagna (Flora Alpina e Rododendro). Inoltre realizziamo, oltre al miele, altri prodotti legati alla vita dell'alveare come propoli e pappa reale.</p>
-              </div>
-            </div>
+                    </div>
+                  </div>
+              @endif
+            @endforeach
           </div>
       </div>
+
 
 
 @endsection

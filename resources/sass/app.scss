@@ -26,7 +26,7 @@ body::-webkit-scrollbar-track-piece  {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Open Sans Condensed', sans-serif;
   font-weight: 200;
 }
 .logo {
@@ -57,7 +57,6 @@ body::-webkit-scrollbar-track-piece  {
     display: flex;
     justify-content: center;
 }
-
 .flex-title {
     align-items: center;
     display: flex;
@@ -87,7 +86,6 @@ body::-webkit-scrollbar-track-piece  {
     text-decoration: underline;
   }
 }
-
 .links {
  margin-top: 30px;
  display: flex;
@@ -139,15 +137,16 @@ body::-webkit-scrollbar-track-piece  {
     display: flex;
     justify-content: center;
       h2 {
-
         padding-top: 50px;
         color: #e47a2e;
         font-weight: 600;
         font-size: 3rem;
       }
       p {
+        padding: 0 5px;
         color: #e47a2e;
         text-align: center;
+        font-size: 1.2rem;
       }
     }
     .flex-dx {
@@ -169,14 +168,11 @@ body::-webkit-scrollbar-track-piece  {
         }
     }
 }
-
-
 .bubbles {
 position: relative;
 color: #e47a2e;
 font-size: 5rem;
 }
-
 .individual-bubble {
 position: absolute;
 border-radius: 100%;
@@ -207,10 +203,12 @@ background-color: #e47a2e;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding-right: 0px;
+  padding-left: 0px;
 }
 .imgesplicativa{
   width: 100%;
-  border-radius: 100%;
+  border-radius: 100%
 }
 .profilo{
   width: 100%;
@@ -249,8 +247,12 @@ background-color: #e47a2e;
     color: #121212;
   }
 }
+
+
+
 .footer{
-  height: 200px;
+  position: relative;
+  height: 250px;
   background-color:#e47a2e;
   color: #121212;
   display: flex;
@@ -274,6 +276,15 @@ background-color: #e47a2e;
     color: #121212;
     text-decoration: underline;
   }
+  .link-icon {
+    width: 100%;
+    text-align: center;
+    i{
+      font-size: 30px;
+      padding: 0 20px;
+      padding-bottom: 5px;
+    }
+  }
   .copy{
     display: flex;
     flex-direction: column;
@@ -292,7 +303,39 @@ background-color: #e47a2e;
 
 }
 
+/*prodotto*/
+.product{
+  margin: 10px 0;
+  .prodotto {
+    border-radius: 20px;
+    background-color: #e47a2e;
+    padding: 0;
+    min-height: 400px;
+      a {
+        .img-prodotto {
+          img{
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 20px 20px 0px 0px;
+          }
+        }
+        .dettagli{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 100px;
+          h3{
+            text-align: center;
+            font-weight: bold;
+            color: #121212;
+          }
+        }
+      }
+  }
 
+}
+/*prodotto*/
 
 
 /*media query*/
@@ -384,6 +427,9 @@ background-color: #e47a2e;
       a{
         font-size: 3.5rem;
       }
+      img{
+        width: 80px;
+      }
     }
   }
 }
@@ -426,6 +472,9 @@ background-color: #e47a2e;
       a{
         font-size: 2.5rem;
       }
+      img{
+        width: 60px;
+      }
     }
     .links{
       display: block;
@@ -445,7 +494,10 @@ background-color: #e47a2e;
 @media only screen and (max-width: 543px) {
   .title {
     a {
-      font-size: 2rem;
+      font-size: 2.5rem;
+    }
+    img{
+      width: 50px;
     }
   }
   .links{
@@ -458,24 +510,31 @@ background-color: #e47a2e;
   .nav-tools{
     .title{
       a{
-        font-size: 1.8rem;
+        font-size: 2.5rem;
+      }
+      img{
+        width: 40px;
       }
     }
   }
 }
 @media only screen and (max-width: 439px) {
   .title {
-    a {
-      font-size: 1.5rem;
+    a{
+      font-size: 2rem;
     }
     img{
-      width: 50px;
+      width: 30px;
     }
+
   }
   .nav-tools{
     .title{
       a{
-        font-size: 1.5rem;
+        font-size: 3rem;
+      }
+      img{
+        width: 30px;
       }
     }
   }
