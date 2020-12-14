@@ -1,6 +1,6 @@
 <footer >
   <div class="footer">
-    <a href="{{route('index')}}"><img src="img/comb2.png" alt="404"></a>
+    <a href="{{route('index')}}"><img src="img/comb2.png" alt="info :"></a>
       <div class="">
         <a href="mailto:ape.curiosa@gmail.com">ape.curiosa@gmail.com /</a>
           <a href="tel:3282712570">Cell : 3282712570</a>

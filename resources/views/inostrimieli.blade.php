@@ -60,7 +60,7 @@
 
 
 
-      <div style="background-color: #e47a2e;color:#121212;padding:40px 0;position:relative;" class="content">
+      <div style="background-color: #e47a2e;color:#121212;padding:15px 0;position:relative;" class="content">
         <div class="row justify-content-center">
           <div class="col-xs-12 col-md-6 col-lg-4  flex-centre ">
             <h2 style="font-size: 2rem;font-weight: bold;">I NOSTRI MIELI</h2>
@@ -73,21 +73,19 @@
         <div class="container-fluid content">
           <div class="row ">
               @foreach ($honeys as $honey)
-              @if ($honey-> available)
-                  <div class="col-xs-12 col-md-6 col-lg-3 blocco-flat flex-center product">
+                  <div class="col-xs-12 col-md-6 col-lg-4 blocco-flat flex-center product">
                     <div class="prodotto">
-                      <a href="#">
+                      <a href="{{route('show',$honey -> title)}}">
                           <div class="img-prodotto">
                             <img src="{{$honey-> image}}" alt="">
                           </div>
                           <div class="dettagli">
-                            <h3>{{$honey-> title}} {{$honey-> weight}}</h3>
+                            <h3>{{$honey-> title}}</h3>
                           </div>
                       </a>
 
                     </div>
                   </div>
-              @endif
             @endforeach
           </div>
       </div>

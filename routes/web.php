@@ -20,3 +20,4 @@ Route::get('/prodotti', 'ApeController@prodotti')->name('prodotti');
 Route::view('/attestati', 'attestati')->name('attestati');
 Route::view('/contatti', 'contatti')->name('contatti');
 Route::view('/info', 'info')->name('info');
+Route::get('/inostrimieli/{title}', 'ApeController@show')->name('show');
